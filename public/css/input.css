@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@font-face {
+  font-family: "Sans-Regular";
+  src: url(../fonts/Sans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Sans-Medium";
+  src: url(../fonts/Sans-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Sans-DemiBold";
+  src: url(../fonts/Sans-DemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Sans-Bold";
+  src: url(../fonts/Sans-Bold.ttf);
+}
+
+body {
+  @apply p-3 bg-[#202124] overflow-hidden relative container mx-auto text-white font-Sans-Regular flex min-h-screen justify-between flex-col;
+}
+
+header.client-header {
+  @apply flex items-center justify-between;
+}
+
+.circle {
+  @apply absolute size-[900px] rounded-full blur-3xl;
+}
+
+.circle.first {
+  @apply bg-green-700/10 -left-40 top-0;
+}
+
+.circle.last {
+  @apply bg-blue-600/10 -right-[300px];
+}
+
+header,
+main,
+footer {
+  @apply z-10 relative;
+}
+
+.profile-button {
+  @apply size-10 child:rounded-full;
+}
+
+.header-items {
+  @apply flex items-center gap-3 child:size-10 child:rounded-full child:flex child:items-center child:justify-center;
+}
+
+a {
+  @apply duration-150 hover:text-emerald-500;
+}
+
+main {
+  @apply h-full mt-24 w-full flex items-center justify-center gap-12 flex-col;
+}
+
+.main-logo {
+  @apply w-40;
+}
+
+.input-card {
+  @apply w-[600px] flex items-center rounded-3xl h-12 relative;
+}
+
+.input-card input {
+  @apply absolute w-full bg-transparent outline-none px-6 h-full top-0 right-0;
+}
+
+.search-button {
+  @apply absolute left-4;
+}
+
+.buttons {
+  @apply flex items-center gap-2 child:px-8 text-sm child:duration-150 child:border child:border-transparent child-hover:border-white/10 child:py-1.5 child:pb-2  child:rounded child:bg-[#303134];
+}
+
+.input-container {
+  @apply min-h-12 rounded-3xl overflow-hidden bg-zinc-700  hover:bg-zinc-600 duration-150;
+
+  .dropdown {
+    @apply scale-y-[0] h-[0]
+  }
+}
+
+.input-container.searching {
+  @apply bg-[#303134] py-1;
+
+  .input-card {
+    input-security: auto;
+    @apply border-b border-white/10 rounded-b-none;
+  }
+
+  .dropdown {
+    @apply h-full scale-y-100;
+    .autocomplete-result {
+      @apply h-12 child:w-full child:h-full child:flex child:items-center gap-2 duration-150 child-hover:text-blue-500 hover:bg-zinc-600/40 child:px-4;
+    }
+  }
+}
+
+footer {
+  @apply fixed bottom-5 text-zinc-400 w-full flex items-center justify-center gap-1 p-0 right-0;
+
+  a {
+    @apply text-green-500 font-Sans-Bold;
+  }
+}

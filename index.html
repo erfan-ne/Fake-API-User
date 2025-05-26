@@ -1,0 +1,81 @@
+<!-- 
+ if input has length, add 'searching' class name to input-card
+ else: remove the class !!
+ -->
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SearchApp</title>
+    <link rel="stylesheet" href="./public/css/styles.css" />
+  </head>
+  <body>
+    <header class="client-header">
+      <div class="header-items">
+        <button class="profile-button">
+          <img src="./public/MyPic.jpg" class="profile-pic" />
+        </button>
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+        <a href="#"> تصاویر </a>
+        <a href="#"> ایمیل </a>
+      </div>
+    </header>
+    <main>
+      <a href="#" target="_blank">
+        <img src="./public/logo.png" class="main-logo" alt="" />
+      </a>
+
+      <div class="input-container">
+        <div class="input-card">
+          <input type="text" />
+          <button class="search-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="dropdown">
+          <!-- Data loaded from js -->
+        </div>
+      </div>
+      <div class="buttons">
+        <button>سبزلرن</button>
+        <button>آب و هوا</button>
+      </div>
+    </main>
+    <footer>
+      <a href="https://github.com/erfan-ne" target="_blank">Erfan</a>
+      Developed with 💙 by &COPY;
+    </footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
