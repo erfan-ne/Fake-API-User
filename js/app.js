@@ -17,4 +17,26 @@ const searches = [
   "تکنیک های طلایی دیباگینگ برای برنامه نویسان",
 ];
 
+const searchHandler = () => {
+  const searchValue = input.value
 
+  const searchResult = searches.filter((search) => search.includes(searchValue))
+  
+  searchResultBox.innerHTML= ""
+
+  if (searchResult.length && searchValue.length){
+    inputContainer.classList.add("searching")
+  
+    searchResult.forEach((search) => searchResultBox.insertAdjacentHTML("beforeend" ,
+        `
+        <div class="autocomplete-result">
+          <a href="#" class="autocomplete-value">${search}</a>
+        </div>
+        `
+      ))
+  } else {
+    inputContainer.classList.remove("searching")
+  }
+}
+
+input.addEventListener("keyup" , searchHandler)
