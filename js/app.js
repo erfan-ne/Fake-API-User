@@ -1,22 +1,34 @@
-const nameInput = document.querySelector ("#fullName-input")
-const mailInput = document.querySelector ("#email-input")
-const subjectInput = document.querySelector("#subject-input")
-const textField = document.querySelector(".text-field")
-const submitBtn = document.querySelector("button")
+const submitBtn = document.querySelector(".submit")
+const userAvatar = document.querySelector(".user-avatar")
+const fullName = document.querySelector(".fullName")
+const userName = document.querySelector(".username")
+const userEmail = document.querySelector("#email")
+const userPhone = document.querySelector("#phone")
+const userPassword = document.querySelector("#password")
 
-const message = []
 
-const addMessage = () => {
-  const newMessage = {
-    userName : nameInput.value,
-    userMail : mailInput.value,
-    subject : subjectInput.value,
-    text : textField.value
-  };
-  message.push(newMessage)
-  alert("نظر شما ثبت شد")
-  console.log(message);
+const showNewUser = () =>{
+  fetch("https://randomuser.me/api/")
+    .then(response => response.json())
+    .then(user => {
+      const userTitle = user.results[0]
+
+      fullName.innerHTML = `${userTitle.name.first} ${userTitle.name.last}`
+      userName.innerHTML = `${userTitle.login.username}@`
+      userEmail.value = userTitle.email
+      userPhone.value = userTitle.phone
+      userPassword.value = userTitle.login.password
+      userAvatar.setAttribute("src" , `${userTitle.picture.large}`)
+
+      // if (userTitle.gender === "male"){
+      //   userAvatar.setAttribute("src" , "./public/images/male.png")
+      // } else {
+      //   userAvatar.setAttribute("src" , "./public/images/female.png")
+      // }
+    })
 }
 
-submitBtn.addEventListener("click", addMessage)
+submitBtn.addEventListener("click" , showNewUser)
+
+
 
