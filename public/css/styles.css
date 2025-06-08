@@ -578,8 +578,6 @@ video {
   src: url(../fonts/Sans-Bold.ttf);
 }
 
-/* Import Poppins Font */
-
 body {
   display: flex;
   height: 100vh;
