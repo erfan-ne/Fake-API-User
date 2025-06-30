@@ -133,30 +133,16 @@ body {
     font-family: Sans-Bold;
     font-size: 1.5rem;
     line-height: 2rem;
+    margin: 0;
   }
-  
-  .data {
-    text-align: center;
-    font-family: Sans-Regular;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    --tw-text-opacity: 1;
-    color: rgb(161 161 170 / var(--tw-text-opacity));
-  }
+
   
   .username {
-    cursor: pointer;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-    --tw-text-opacity: 1;
-    color: rgb(99 102 241 / var(--tw-text-opacity));
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgb(99 102 241);
     text-decoration-line: underline;
-    transition-duration: 150ms;
-  }
-  
-  .username:hover {
-    --tw-text-opacity: 0.8;
+    margin-top: 0;
   }
   
   label {
