@@ -11,14 +11,21 @@ const showNewUser = () =>{
   fetch("https://randomuser.me/api/")
     .then(response => response.json())
     .then(user => {
-      const userTitle = user.results[0]
+      const {
+        name:{first , last},
+        login:{username , password},
+        email,
+        phone,
+        picture:{large}
+      } = user.results[0]
+      
 
-      fullName.innerHTML = `${userTitle.name.first} ${userTitle.name.last}`
-      userName.innerHTML = `${userTitle.login.username}@`
-      userEmail.value = userTitle.email
-      userPhone.value = userTitle.phone
-      userPassword.value = userTitle.login.password
-      userAvatar.setAttribute("src" , `${userTitle.picture.large}`)
+      fullName.innerHTML = `${first} ${last}`
+      userName.innerHTML = `${username}@`
+      userEmail.value = email
+      userPhone.value = phone
+      userPassword.value = password
+      userAvatar.setAttribute("src" , `${large}`)
 
       // if (userTitle.gender === "male"){
       //   userAvatar.setAttribute("src" , "./public/images/male.png")
