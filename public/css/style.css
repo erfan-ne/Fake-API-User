@@ -202,7 +202,7 @@ body {
     color: rgb(66, 127, 240);
   }
   
-  .copyright::before {
-    --tw-content: "💙";
-    content: var(--tw-content);
+  .copyright{
+    text-decoration: none;
+    color: aqua;
   }
