@@ -202,7 +202,15 @@ body {
     color: rgb(66, 127, 240);
   }
   
+  span{
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
   .copyright{
     text-decoration: none;
-    color: aqua;
+    color: rgb(73, 158, 255);
+    margin: 0.5rem;
   }
